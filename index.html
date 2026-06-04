@@ -292,6 +292,37 @@ h2.section-title{
 }
 .demo-send:hover{background:#1b5e20}
 
+/* ===== DEMO CTA + QR ===== */
+.demo-cta{
+  max-width:760px;margin:2.5rem auto 0;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+  gap:2rem;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:18px;padding:1.8rem 2rem
+}
+.demo-cta-text{flex:1;min-width:240px;color:white}
+.demo-cta-text h3{font-size:1.25rem;margin-bottom:0.4rem}
+.demo-cta-text h3 span{color:var(--green)}
+.demo-cta-text p{font-size:0.9rem;color:rgba(255,255,255,0.65);margin-bottom:1.1rem;line-height:1.5}
+.btn-demo{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:var(--green);color:white;text-decoration:none;
+  padding:0.85rem 1.6rem;border-radius:10px;font-weight:bold;font-size:0.95rem;
+  transition:transform 0.2s,box-shadow 0.2s
+}
+.btn-demo:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(37,211,102,0.4)}
+.demo-qr{text-align:center;color:white;flex-shrink:0}
+.demo-qr img{
+  width:140px;height:140px;border-radius:12px;
+  background:white;padding:8px;display:block
+}
+.demo-qr span{display:block;font-size:0.78rem;color:rgba(255,255,255,0.6);margin-top:0.6rem}
+@media(max-width:560px){
+  .demo-cta{flex-direction:column;text-align:center}
+  .demo-cta-text{text-align:center}
+}
+
 /* ===== PRICING ===== */
 .pricing{background:var(--light)}
 .pricing-grid{
@@ -449,6 +480,7 @@ footer a{color:var(--gold)}
   <ul>
     <li><a href="#about">Features</a></li>
     <li><a href="#subjects">Subjects</a></li>
+    <li><a href="#demo">Demo</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#school">Schools</a></li>
     <li><a href="tel:+917019068606" class="nav-wa">📞 Call</a></li>
@@ -478,6 +510,7 @@ footer a{color:var(--gold)}
         💬 Free Trial ಶುರು ಮಾಡಿ
       </a>
       <a href="#pricing" class="btn-secondary">📋 Plans ನೋಡಿ</a>
+      <a href="#demo" class="btn-secondary">🎬 Live Demo</a>
     </div>
     <div class="hero-stats">
       <div class="stat"><div class="stat-num">8–10</div><div class="stat-label">KSEEB Classes</div></div>
@@ -642,6 +675,17 @@ footer a{color:var(--gold)}
     <div class="demo-input">
       <input type="text" id="chatInput" placeholder="ಪ್ರಶ್ನೆ ಕೇಳಿ / Ask a question..." onkeypress="handleKey(event)">
       <button class="demo-send" onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+  <div class="demo-cta">
+    <div class="demo-cta-text">
+      <h3>🎬 ಪೂರ್ಣ <span>Live Demo</span> ತೆರೆಯಿರಿ</h3>
+      <p>ನಿಜವಾದ WhatsApp-style bot demo — Menu, Notes, Q&amp;A, Quiz ಎಲ್ಲ try ಮಾಡಿ. App download ಬೇಡ.</p>
+      <a href="smartpath_live_demo.html" class="btn-demo" target="_blank">▶ Open Full Demo</a>
+    </div>
+    <div class="demo-qr">
+      <img src="data:image/png;base64,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" alt="Scan to see demo QR">
+      <span>📱 Scan to See Demo</span>
     </div>
   </div>
 </section>
